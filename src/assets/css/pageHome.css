@@ -1,0 +1,106 @@
+.pageHome .swiper-slide-main.content{
+    background:#e4e4e4;
+}
+.swiper-container-focus {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: visible!important;
+}
+.swiper-slide-focus {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    overflow: hidden;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide-focus img{
+    width: 100%;
+}
+.swiper-container-focus .swiper-pagination{
+    height: 1.05rem;
+    position: static;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.swiper-pagination-bullet-active{
+    background: #00c4b8;
+}
+.contCase .list{
+    padding:0.2rem 0.2rem;
+}
+.contCase .list li{
+    width: 50%;
+    float: left;
+    padding-bottom: 0.6rem;
+}
+.contCase .list li a{
+    display: block;
+    margin: 0 0.1rem;
+    position: relative;
+    overflow: hidden;
+    vertical-align: top;
+    line-height: 0px;
+}
+.contCase .list li img{
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+.contCase .list li img.blank{
+    position: static;
+    width: 100%!important;
+}
+
+.contHome{
+    height: 100vh;
+}
+.contHome .top{
+    height: 35vh;
+    background: #000 url(../../../static/img/bg_home_top.png) no-repeat 0 0;
+    background-size: 100% auto;
+}
+.contHome .bottom{
+    height: 65vh;
+    background: #003366;
+}
+.contHome .photo{
+    width: 150px;
+    line-height: 0px;
+    position: absolute;
+    left: 50%;
+    top: 25vh;
+    margin-left:-75px;
+    border:4px solid #eaeaea;
+    border-radius: 100%;
+    overflow: hidden;
+}
+.contHome .photo img{
+    width: 100%;
+}
+.contHome .slogan{
+    position: absolute;
+    width: 100%;
+    top: 60vh;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #eaeaea;
+}
