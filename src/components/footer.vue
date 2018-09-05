@@ -1,7 +1,7 @@
 <template>
-	<footer>
-	  京ICP备15015711号-1
-	</footer>
+  <footer>
+    京ICP备15015711号-1
+  </footer>
 </template>
 
 <script>

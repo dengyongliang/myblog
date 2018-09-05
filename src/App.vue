@@ -28,6 +28,15 @@
                 ABILITY
               </router-link>
             </li>
+            <li class="action">
+              <router-link to="/cate/life">
+                <i class="icon">
+                  <img src="../static/img/icon/icon_people.png" alt="" />
+                  <img class="hover" src="../static/img/icon/icon_people2.png" alt="" />
+                </i>
+                LIFE
+              </router-link>
+            </li>
           </ul>
         </div>
         <div class="swiper-slide swiper-slide-main content">

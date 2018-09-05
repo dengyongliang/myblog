@@ -15,26 +15,26 @@
 export default {
   name: 'Case',
   updated: function () {
-    console.log("监听到了case更新完成");
-    setTimeout(function(){
+    console.log('监听到了case更新完成')
+    setTimeout(function () {
       window.swiperCont.resize.resizeHandler()
       window.swiperCont.resize.resizeHandler()
       window.swiperCont.slideTo(0, 300, false)
-    },100)
+    }, 100)
   },
   data () {
     return {
       caseArray: []
     }
   },
-  methods:{
+  methods: {
     // 获取case数据
-    getData:function(){
-      this.$http.get("../../static/data/case.js").then(
+    getData: function () {
+      this.$http.get('../../static/data/case.js').then(
         function (res) {
           // window.datass = res.bodyText
           this.caseArray = eval('(' + res.bodyText + ')')
-        },function (res) {
+        }, function (res) {
           return []
         }
       )
@@ -45,10 +45,10 @@ export default {
     this.getData()
   },
   watch: {
-    "caseArray": {
-      handler:function(val,oldVal){
-        console.log("监听到了case数据变化")
-      },
+    'caseArray': {
+      handler: function (val, oldVal) {
+        console.log('监听到了case数据变化')
+      }
     }
   }
 }

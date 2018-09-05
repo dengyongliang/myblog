@@ -10,9 +10,9 @@ import echarts from 'echarts'
 import VueLazyLoad from 'vue-lazyload'
 
 Vue.use(VueResource)
-Vue.use(VueLazyLoad,{
-    error:'./static/img/error.jpg',
-    loading:'./static/img/loading.gif'
+Vue.use(VueLazyLoad, {
+  error: './static/img/error.jpg',
+  loading: './static/img/loading.gif'
 })
 Vue.prototype.$echarts = echarts
 

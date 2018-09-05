@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Main from '@/components/Main'
 import Case from '@/components/Case'
 import Ability from '@/components/Ability'
+import Life from '@/components/Life'
 
 Vue.use(Router)
 
@@ -32,6 +33,11 @@ export default new Router({
           path: 'ability',
           name: 'Ability',
           component: Ability
+        },
+        {
+          path: 'life',
+          name: 'Life',
+          component: Life
         }
       ]
     }

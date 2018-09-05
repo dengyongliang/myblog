@@ -1,9 +1,11 @@
 <template>
   <div>
     <Header></Header>
-    <transition name="fold">
-      <router-view></router-view>
-    </transition>
+    <div class="contMain">
+      <transition name="fold">
+        <router-view></router-view>
+      </transition>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -15,7 +17,10 @@ export default {
   components: { Header, Footer },
   name: 'Main',
   mounted: function () {
-
+    this.$nextTick(function () {
+      // 设置屏幕可用区域高度
+      $('.contMain').css('min-height', ($(window).height() - $('header').height() - $('footer').height()))
+    })
   },
   data () {
     return {

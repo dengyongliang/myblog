@@ -1,11 +1,11 @@
 [
   {
-    href: 'http://dyliang.com/case/demo23/index.html',
-    src: '/static/img/view/view23.png'
-  },
-  {
     href: 'http://dyliang.com/case/demo22/index.html',
     src: '/static/img/view/view22.png'
+  },
+  {
+    href: 'http://dyliang.com/case/demo23/index.html',
+    src: '/static/img/view/view23.png'
   },
   {
     href: 'http://dyliang.com/case/demo21/index.html',
