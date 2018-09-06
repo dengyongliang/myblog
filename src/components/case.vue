@@ -16,10 +16,15 @@ export default {
   name: 'Case',
   updated: function () {
     console.log('监听到了case更新完成')
+    try {
+      window.swiperCont.slideTo(0, 300, false)
+    }
+    catch(err) {
+      console.log(err)
+    }
     setTimeout(function () {
       window.swiperCont.resize.resizeHandler()
       window.swiperCont.resize.resizeHandler()
-      window.swiperCont.slideTo(0, 300, false)
     }, 100)
   },
   data () {

@@ -106,7 +106,7 @@ body {
 
 .menu {
 	min-width: 100px;
-	width: 50%;
+	width: 40%;
 	max-width: 320px;
 
 	background-color: #2C8DFB;
@@ -118,8 +118,8 @@ body {
 
 .menu-button{
 	position: absolute;
-	top: 12px;
-	left: 10px;
+	top: 0px;
+	left: 0px;
 	width: 30px;
 	height: 30px;
 	z-index: 99999;
@@ -130,6 +130,7 @@ body {
 	cursor: pointer;
 	-webkit-transition: .3s;
 	transition: .3s;
+	margin:15px 0 0 10px;
 }
 
 .menu-button .bar{
@@ -146,6 +147,7 @@ body {
 .cross{
 	width: 100%;
 	height: 100%;
+	background: rgba(0,51,102,0.5);
 }
 .cross .bar:nth-of-type(1) {
 	-webkit-transform: translateY(15px) rotate(-45deg);
@@ -206,6 +208,9 @@ body {
 .swiper-slide-main.menu li a{
 	color: #313131;
 	display: block;
+	width: 100%;
+	font-size: 16px;
+	text-align: center;
 }
 .swiper-slide-main.menu .icon{
 	width: 0.32rem;
@@ -233,11 +238,19 @@ body {
 .swiper-slide-main.content{
 	background:#fff;
 }
+.fold-enter-active {
+  animation-name: fadeIn;
+  animation-duration: .5s;
+}
+.fold-leave-active {
+  animation-name: fadeOut;
+  animation-duration: 0s;
+}
 header{
 	display: block;
 	width: 100%;
 	height: 50px;
-	background: #7fb2b9;
+	background: #003366;
 	text-align: center;
 	position: relative;
     display: -webkit-flex;

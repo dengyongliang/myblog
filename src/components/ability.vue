@@ -104,7 +104,12 @@ export default {
       console.log('监听到了ability更新完成')
       window.swiperCont.resize.resizeHandler()
       window.swiperCont.resize.resizeHandler()
-      window.swiperCont.slideTo(0, 300, false)
+      try {
+        window.swiperCont.slideTo(0, 300, false)
+      }
+      catch(err) {
+        console.log(err)
+      }
     }
   },
   watch: {

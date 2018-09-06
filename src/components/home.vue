@@ -18,6 +18,7 @@ export default {
   mounted: function () {
     try {
       window.swiperCont.slideTo(0, 300, false)
+      $('.swiper-slide-main.content').addClass("swiper-no-swiping")
     }
     catch(err) {
       console.log(err)

@@ -12,7 +12,8 @@ import VueLazyLoad from 'vue-lazyload'
 Vue.use(VueResource)
 Vue.use(VueLazyLoad, {
   error: './static/img/error.jpg',
-  loading: './static/img/loading.gif'
+  loading: './static/img/loading.gif',
+  attempt: 2
 })
 Vue.prototype.$echarts = echarts
 
@@ -29,85 +30,17 @@ window.vm = new Vue({
   template: '<App/>',
   mounted () {
     this.$nextTick(function () {
-      // loading
-      var cacheList = [
-        [1434407, 'bg_home_top.jpg'],
-        [18091, 'blank.png'],
-        [98788, 'logo2.png'],
-        [1339344, 'photo.jpg']
-        // [897104, 'view/view01.png'],
-        // [724262, 'view/view02.png'],
-        // [849000, 'view/view03.png'],
-        // [525490, 'view/view04.png'],
-        // [76215, 'view/view05.png'],
-        // [1075116, 'view/view06.png'],
-        // [1626161, 'view/view07.png'],
-        // [1611991, 'view/view08.png'],
-        // [1315838, 'view/view09.png'],
-        // [1343060, 'view/view10.png'],
-        // [422006, 'view/view11.png'],
-        // [355325, 'view/view12.png'],
-        // [406810, 'view/view13.png'],
-        // [764915, 'view/view14.png'],
-        // [1768464, 'view/view15.png'],
-        // [372553, 'view/view16.png'],
-        // [68191, 'view/view17.png'],
-        // [1234465, 'view/view18.png'],
-        // [1070252, 'view/view19.png'],
-        // [606782, 'view/view20.png'],
-        // [1495521, 'view/view21.png'],
-        // [590872, 'view/view22.png'],
-        // [670968, 'view/view23.png']
-      ]
-      var cacheObj = {
-        progress: 0
+      // 去除遮罩
+      setTimeout(function () {
+        //document.getElementById('load').className = ' fadeOutLeft'
+        $('#load').addClass('fadeOutDown')
+        // window.swiperCont.resize.resizeHandler()
+        window.swiperCont.resize.resizeHandler()
+      }, 2000)
+      // 判断是否首页
+      if(this.$route.name == 'Home'){
+        $('.swiper-slide-main.content').addClass("swiper-no-swiping")
       }
-      function perload () {
-        var total = 0
-        var item
-        var obj = {}
-        for (var i = 0; i < cacheList.length; i++) {
-          item = cacheList[i]
-          total += item[0]
-          obj[item[1]] = item[0]
-        }
-        cacheObj.total = total
-        cacheObj.list = obj
-      }
-
-      function setProgress (progress) {
-        progress = progress > 1 ? 1 : progress < 0 ? 0 : progress
-        $('.loading .progress2').css('width', Math.ceil(progress * 100) + '%')
-        $('.loading .value').text(Math.ceil(progress * 100) + '%')
-
-        if (Math.ceil(progress * 100) === 100) {
-          setTimeout(function () {
-            $('.loading').hide()
-            document.getElementById('load').remove()
-            window.swiperCont.resize.resizeHandler()
-            window.swiperCont.resize.resizeHandler()
-          }, 800)
-        }
-      }
-      window.setProgress = setProgress
-
-      function loadImage (imgsrc) {
-        var image = new Image()
-        image.src = imgsrc
-        image.onload = function () {
-          // console.log(imgsrc.split('static/img/')[1])
-          cacheObj.progress += cacheObj.list[imgsrc.split('static/img/')[1]] / cacheObj.total
-          setProgress(cacheObj.progress)
-          if (cacheList[0]) {
-            loadImage('static/img/' + cacheList.pop()[1])
-          }
-        }
-        image.src = imgsrc
-      }
-
-      perload()
-      loadImage('static/img/' + cacheList.pop()[1])
-
       // 缩放
       // var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
       var clientWidth = document.documentElement.clientWidth
@@ -192,6 +125,7 @@ window.vm = new Vue({
     })
   }
 })
+
 // window.vm.$router.afterEach((to, from) => {
 //   window.vm.path = to.fullPath
 // })
