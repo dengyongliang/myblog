@@ -8,11 +8,6 @@
           </div>
           <ul>
             <li class="action">
-              <router-link to="/">
-                首页
-              </router-link>
-            </li>
-            <li class="action">
               <router-link to="/cate/case">
                 案例
               </router-link>
@@ -58,18 +53,8 @@
     </div>
     <div class="btnTop"></div>
     <div class="loading animated" id="load">
-      <div class="shaft-load4">
-        <div class="shaft1"></div>
-        <div class="shaft2"></div>
-        <div class="shaft3"></div>
-        <div class="shaft4"></div>
-        <div class="shaft5"></div>
-        <div class="shaft6"></div>
-        <div class="shaft7"></div>
-        <div class="shaft8"></div>
-        <div class="shaft9"></div>
-        <div class="shaft10"></div>
-      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="none" d="M24.3,30C11.4,30,5,43.3,5,50s6.4,20,19.3,20c19.3,0,32.1-40,51.4-40 C88.6,30,95,43.3,95,50s-6.4,20-19.3,20C56.4,70,43.6,30,24.3,30z" stroke="#8cd0e5" stroke-width="4" stroke-dasharray="2.5658892822265624 2.5658892822265624"><animate attributeName="stroke-dashoffset" calcMode="linear" values="0;256.58892822265625" keyTimes="0;1" dur="1" begin="0s" repeatCount="indefinite"></animate></path></svg>
+      <strong>Welcome</strong>
     </div>
   </div>
 </template>
@@ -88,152 +73,17 @@ export default {
 </script>
 
 <style type="text/css">
-  .loading{width:100%;height:100%;position:fixed;top:0px;left:0px;background:#003366;z-index:9999;opacity: 1;}
-  /* Shaft 4 */
-[class^="shaft-load"] {
-  margin: 50px auto;
-  width: 60px;
-  height: 30px;
-}
-[class^="shaft-load"] > div {
-  float: left;
-  background: #893878;
-  height: 100%;
-  width: 5px;
-  margin-right: 1px;
-  display: inline-block;
-}
-[class^="shaft-load"] .shaft1 {
-  -webkit-animation-delay: 0.05s;
-  -moz-animation-delay: 0.05s;
-  -o-animation-delay: 0.05s;
-  animation-delay: 0.05s;
-}
-[class^="shaft-load"] .shaft2 {
-  -webkit-animation-delay: 0.1s;
-  -moz-animation-delay: 0.1s;
-  -o-animation-delay: 0.1s;
-  animation-delay: 0.1s;
-}
-[class^="shaft-load"] .shaft3 {
-  -webkit-animation-delay: 0.15s;
-  -moz-animation-delay: 0.15s;
-  -o-animation-delay: 0.15s;
-  animation-delay: 0.15s;
-}
-[class^="shaft-load"] .shaft4 {
-  -webkit-animation-delay: 0.2s;
-  -moz-animation-delay: 0.2s;
-  -o-animation-delay: 0.2s;
-  animation-delay: 0.2s;
-}
-[class^="shaft-load"] .shaft5 {
-  -webkit-animation-delay: 0.25s;
-  -moz-animation-delay: 0.25s;
-  -o-animation-delay: 0.25s;
-  animation-delay: 0.25s;
-}
-[class^="shaft-load"] .shaft6 {
-  -webkit-animation-delay: 0.3s;
-  -moz-animation-delay: 0.3s;
-  -o-animation-delay: 0.3s;
-  animation-delay: 0.3s;
-}
-[class^="shaft-load"] .shaft7 {
-  -webkit-animation-delay: 0.35s;
-  -moz-animation-delay: 0.35s;
-  -o-animation-delay: 0.35s;
-  animation-delay: 0.35s;
-}
-[class^="shaft-load"] .shaft8 {
-  -webkit-animation-delay: 0.4s;
-  -moz-animation-delay: 0.4s;
-  -o-animation-delay: 0.4s;
-  animation-delay: 0.4s;
-}
-[class^="shaft-load"] .shaft9 {
-  -webkit-animation-delay: 0.45s;
-  -moz-animation-delay: 0.45s;
-  -o-animation-delay: 0.45s;
-  animation-delay: 0.45s;
-}
-[class^="shaft-load"] .shaft10 {
-  -webkit-animation-delay: 0.5s;
-  -moz-animation-delay: 0.5s;
-  -o-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-}
-  .shaft-load4 {
-    margin-top: 30vh;
-    width: 80px;
+  .loading{width:100%;height:100%;position:fixed;top:0px;left:0px;background:#003366;z-index:9999;opacity: 1;text-align:center;}
+  .loading svg{
+    width:30%;
+    display:inline-block;
+    margin-top:40%;
   }
-  .shaft-load4 > div {
-    background-color: #739ba9;
-    margin-right: 0;
-    -webkit-animation: loading4 1.5s infinite ease-in-out;
-    -moz-animation: loading4 1.5s infinite ease-in-out;
-    -o-animation: loading4 1.5s infinite ease-in-out;
-    animation: loading4 1.5s infinite ease-in-out;
-    width: 8px;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    -webkit-transform: scaleY(0.1);
-    -moz-transform: scaleY(0.1);
-    -ms-transform: scaleY(0.1);
-    -o-transform: scaleY(0.1);
-    transform: scaleY(0.1);
+  .loading strong{
+    display:block;
+    color:#fff;
+    font-size:40px;
   }
-
-  @-webkit-keyframes loading4 {
-    50% {
-      -webkit-transform: scaleY(1.5);
-      -moz-transform: scaleY(1.5);
-      -ms-transform: scaleY(1.5);
-      -o-transform: scaleY(1.5);
-      transform: scaleY(1.5);
-      background: #739ba9;
-      opacity: 1;
-      filter: alpha(opacity=100);
-    }
-  }
-  @-moz-keyframes loading4 {
-    50% {
-      -webkit-transform: scaleY(1.5);
-      -moz-transform: scaleY(1.5);
-      -ms-transform: scaleY(1.5);
-      -o-transform: scaleY(1.5);
-      transform: scaleY(1.5);
-      background: #739ba9;
-      opacity: 1;
-      filter: alpha(opacity=100);
-    }
-  }
-  @-o-keyframes loading4 {
-    50% {
-      -webkit-transform: scaleY(1.5);
-      -moz-transform: scaleY(1.5);
-      -ms-transform: scaleY(1.5);
-      -o-transform: scaleY(1.5);
-      transform: scaleY(1.5);
-      background: #739ba9;
-      opacity: 1;
-      filter: alpha(opacity=100);
-    }
-  }
-  @keyframes loading4 {
-    50% {
-      -webkit-transform: scaleY(1.5);
-      -moz-transform: scaleY(1.5);
-      -ms-transform: scaleY(1.5);
-      -o-transform: scaleY(1.5);
-      transform: scaleY(1.5);
-      background: #739ba9;
-      opacity: 1;
-      filter: alpha(opacity=100);
-    }
-  }
-
-
 </style>
 
 <style type="text/css">

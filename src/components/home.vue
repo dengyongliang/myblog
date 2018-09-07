@@ -3,7 +3,6 @@
     <div class="photo"><img src="../../static/img/photo.png" alt="" /></div>
     <p class="slogan">只有更<br />“心”<br />才能赢得一切<br />……</p>
     <div class="top"></div>
-    <div class="bottom"></div>
   </div>
 </template>
 
@@ -18,6 +17,7 @@ export default {
   mounted: function () {
     try {
       window.swiperCont.slideTo(0, 300, false)
+      $(".btnTop").hide()
       $('.swiper-slide-main.content').addClass("swiper-no-swiping")
     }
     catch(err) {

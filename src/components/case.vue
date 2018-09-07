@@ -18,6 +18,7 @@ export default {
     console.log('监听到了case更新完成')
     try {
       window.swiperCont.slideTo(0, 300, false)
+      $(".btnTop").hide()
     }
     catch(err) {
       console.log(err)

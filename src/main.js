@@ -36,7 +36,7 @@ window.vm = new Vue({
         $('#load').addClass('fadeOutDown')
         // window.swiperCont.resize.resizeHandler()
         window.swiperCont.resize.resizeHandler()
-      }, 2000)
+      }, 3000)
       // 判断是否首页
       if(this.$route.name == 'Home'){
         $('.swiper-slide-main.content').addClass("swiper-no-swiping")

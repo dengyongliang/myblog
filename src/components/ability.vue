@@ -106,6 +106,7 @@ export default {
       window.swiperCont.resize.resizeHandler()
       try {
         window.swiperCont.slideTo(0, 300, false)
+        $(".btnTop").hide()
       }
       catch(err) {
         console.log(err)

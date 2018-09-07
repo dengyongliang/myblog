@@ -74,9 +74,9 @@
     height: 100vh;
 }
 .contHome .top{
-    height: 35vh;
+    height: 100vh;
     background: #000 url(../../../static/img/bg_home_top.png) no-repeat 0 0;
-    background-size: 100% auto;
+    background-size: 100% 100%;
 }
 .contHome .bottom{
     height: 65vh;

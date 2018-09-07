@@ -15,6 +15,7 @@ export default {
   mounted: function () {
     try {
       window.swiperCont.slideTo(0, 300, false)
+      $(".btnTop").hide()
     }
     catch(err) {
       console.log(err)

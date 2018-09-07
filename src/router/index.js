@@ -16,7 +16,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
+      name: '首页',
       component: Home
     },
     {
@@ -25,27 +25,27 @@ export default new Router({
       children: [
         {
           path: '',
-          name: 'Case',
+          name: '案例',
           component: Case
         },
         {
           path: 'case',
-          name: 'Case',
+          name: '案例',
           component: Case
         },
         {
           path: 'ability',
-          name: 'Ability',
+          name: '技能',
           component: Ability
         },
         {
           path: 'career',
-          name: 'Career',
+          name: '生涯',
           component: Career
         },
         {
           path: 'life',
-          name: 'Life',
+          name: '生活',
           component: Life
         }
       ]
