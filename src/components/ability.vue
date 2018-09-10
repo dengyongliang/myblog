@@ -84,7 +84,7 @@ export default {
             }
           },
           {
-            name: '等级',
+            name: '熟练',
             type: 'bar',
             label: {
               normal: {

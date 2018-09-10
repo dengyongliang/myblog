@@ -3,9 +3,19 @@
     <timeline v-for="item in timeArray">
       <timeline-title>{{ item.time }}</timeline-title>
       <timeline-item bg-color="#fff" class="itemTime">{{ item.title }}</timeline-item>
-      <timeline-item bg-color="#fff" class="itemCont" v-if="item.itemsText.length > 0" >
+      <timeline-item bg-color="#fff" class="itemCont job" v-if="item.itemsText.length > 0 && item.type=='job'" >
         <p v-for="text in item.itemsText">
           {{ text }}
+        </p>
+      </timeline-item>
+      <timeline-item bg-color="#fff" class="itemCont learn" v-if="item.itemsText.length > 0 && item.type=='learn'" >
+        <p v-for="text in item.itemsText">
+          {{ text }}
+        </p>
+      </timeline-item>
+      <timeline-item bg-color="#fff" class="itemCont" v-if="item.itemsLink.length > 0" >
+        <p v-for="link in item.itemsLink">
+          {{ link }}
         </p>
       </timeline-item>
     </timeline>
@@ -95,6 +105,9 @@ export default {
 }
 .timeline-item.itemCont {
     margin-top:10px;
+}
+.timeline .itemCont.learn{
+  background:#a5c9cd;
 }
 </style>
 
