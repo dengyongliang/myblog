@@ -8,6 +8,8 @@ import $ from 'n-zepto'
 import Swiper from 'swiper'
 import echarts from 'echarts'
 import VueLazyLoad from 'vue-lazyload'
+// 自定义方法及变量
+import GLOBAL from './global/global'
 
 Vue.use(VueResource)
 Vue.use(VueLazyLoad, {
@@ -18,6 +20,7 @@ Vue.use(VueLazyLoad, {
 Vue.prototype.$echarts = echarts
 
 Vue.config.productionTip = false
+Vue.prototype.GLOBALS = GLOBAL
 
 /* eslint-disable no-new */
 window.vm = new Vue({
@@ -29,14 +32,16 @@ window.vm = new Vue({
   components: { App },
   template: '<App/>',
   mounted () {
+    var vue_this = this
     this.$nextTick(function () {
       // 去除遮罩
-      setTimeout(function () {
-        //document.getElementById('load').className = ' fadeOutLeft'
-        $('#load').addClass('fadeOutDown')
-        // window.swiperCont.resize.resizeHandler()
-        window.swiperCont.resize.resizeHandler()
-      }, 3000)
+      // 等待首页背景图创建完毕
+      // 背景图1-5张随机
+      var image = new Image()
+      image.src = this.GLOBALS.HOME_IMG_SRC
+      image.onload = function () {
+        vue_this.GLOBALS.setBgImgAndDelCover()
+      }
       // 判断是否首页
       if(this.$route.name == 'Home'){
         $('.swiper-slide-main.content').addClass("swiper-no-swiping")

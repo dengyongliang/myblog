@@ -1,12 +1,16 @@
 <template>
   <div class="contHome">
-    <div class="photo"><img src="../../static/img/photo.png" alt="" /></div>
+    <div class="photo">
+      <img src="../../static/img/photo.png" alt="" />
+      <div class="cover">邓永亮</div>
+    </div>
     <p class="slogan">只有更<br />“心”<br />才能赢得一切<br />……</p>
-    <div class="top"></div>
+    <div class="top" id="bgHome"></div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'Home',
   data () {
@@ -15,6 +19,7 @@ export default {
     }
   },
   mounted: function () {
+    this.GLOBALS.setBgImgAndDelCover()
     try {
       window.swiperCont.slideTo(0, 300, false)
       $(".btnTop").hide()
@@ -26,8 +31,3 @@ export default {
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>

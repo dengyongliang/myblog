@@ -38,7 +38,6 @@ export default {
     getData: function () {
       this.$http.get('../../static/data/case.js').then(
         function (res) {
-          // window.datass = res.bodyText
           this.caseArray = eval('(' + res.bodyText + ')')
         }, function (res) {
           return []
