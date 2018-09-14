@@ -5,7 +5,7 @@ import Main from '@/components/Main'
 import Case from '@/components/Case'
 import Ability from '@/components/Ability'
 import Career from '@/components/Career'
-import Life from '@/components/Life'
+import Photography from '@/components/Photography'
 Router.prototype.goBack = function () {
 　　this.isBack = true
 　　window.history.go(-1)
@@ -44,9 +44,9 @@ export default new Router({
           component: Career
         },
         {
-          path: 'life',
-          name: '生活',
-          component: Life
+          path: 'photography',
+          name: '摄影',
+          component: Photography
         }
       ]
     }

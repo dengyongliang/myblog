@@ -8,6 +8,7 @@ import $ from 'n-zepto'
 import Swiper from 'swiper'
 import echarts from 'echarts'
 import VueLazyLoad from 'vue-lazyload'
+
 // 自定义方法及变量
 import GLOBAL from './global/global'
 
@@ -39,7 +40,7 @@ window.vm = new Vue({
       // 背景图1-5张随机
       var image = new Image()
       image.src = this.GLOBALS.HOME_IMG_SRC
-      image.onload = function () {
+      image.onload = () => {
         vue_this.GLOBALS.setBgImgAndDelCover()
       }
       // 判断是否首页
@@ -95,6 +96,19 @@ window.vm = new Vue({
           init: function () {
           },
           transitionEnd: function (swiper) {
+            // 处理摄影列表图片延迟加载，滚动条重置
+            if( window.vm.$route.fullPath.indexOf("photography")!=-1 ){
+              $(".scroll").each(function(){
+                if($(this).hasClass("open")){
+                  let h = $(this).find(".wrap").height()
+                  $(this).css("height",h+'px');
+                }else{
+                  let h = $(this).find("img").eq(0).height()
+                  $(this).attr("data-height",h).css("height",h+'px');
+                }
+              })
+              window.swiperCont.resize.resizeHandler()
+            }
             if (Math.abs(window.swiperCont.getTranslate()) > $(document).height()) {
               $('.btnTop').show()
             } else {

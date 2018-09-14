@@ -42,15 +42,15 @@
 .swiper-pagination-bullet-active{
     background: #00c4b8;
 }
-.contCase .list{
+.list{
     padding:0.2rem 0.2rem;
 }
-.contCase .list li{
+.list li{
     width: 50%;
     float: left;
     padding-bottom: 0.6rem;
 }
-.contCase .list li a{
+.list li a{
     display: block;
     margin: 0 0.1rem;
     position: relative;
@@ -58,18 +58,74 @@
     vertical-align: top;
     line-height: 0px;
 }
-.contCase .list li img{
+.list li img{
     width: 100%;
     position: absolute;
     left: 0px;
     top: 0px;
     z-index: 1;
 }
-.contCase .list li img.blank{
+.list li img.blank{
     position: static;
     width: 100%!important;
 }
-
+.contPhotography .list li{
+    width: 100%;
+}
+.contPhotography .list .scroll{
+    overflow: hidden;
+    transition: height 0.5s;
+    position: relative;
+    z-index: 1;
+    background: #f28c8c;
+    margin:0 0.1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.contPhotography .list .scroll.open{
+/*    position: fixed;
+    width: 100%;
+    height:auto!important;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+    background: #000;*/
+}
+.contPhotography .list .scroll p{
+    text-align: center;
+    font-size: 12px;
+    margin:0 0.1rem;
+    padding:10px 0;
+    line-height: 18px;
+    color: #fff;
+}
+.contPhotography .list a{
+    border-radius: 10px;
+    /*box-shadow: 1px 1px 1px #000;*/
+}
+.contPhotography .list img{
+    position: static;
+    border-radius: 10px;
+    vertical-align: top;
+}
+.contPhotography .list .info{
+    background: #a5c9cd;
+    position: relative;
+    top:-15px;
+    margin:0 0.1rem;
+    z-index: 0;
+    padding:30px 10px 10px 10px;
+    border-radius: 10px;
+}
+.contPhotography .list .info p{
+    color: #fff;
+    font-size: 12px;
+}
+.contPhotography .list .info h3{
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
 .contHome{
     height: 100vh;
 }

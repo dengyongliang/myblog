@@ -23,8 +23,8 @@
               </router-link>
             </li>
             <li class="action">
-              <router-link to="/cate/life">
-                生活
+              <router-link to="/cate/photography">
+                摄影
               </router-link>
             </li>
           </ul>

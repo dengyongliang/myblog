@@ -1,5 +1,6 @@
-var HOME_IMG_SRC = 'static/img/bg_'+Math.ceil(Math.random() * 5)+'.png'
-function setBgImgAndDelCover () {
+"use strict"
+const HOME_IMG_SRC = 'static/img/bg_'+Math.ceil(Math.random() * 5)+'.png'
+var setBgImgAndDelCover = () => {
   if( $('.contHome').length ){
     var _domBg = document.getElementById('bgHome')
     _domBg.style.background = 'url('+HOME_IMG_SRC+')'
