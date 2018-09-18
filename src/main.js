@@ -47,11 +47,6 @@ window.vm = new Vue({
       if(this.$route.name == 'Home'){
         $('.swiper-slide-main.content').addClass("swiper-no-swiping")
       }
-      // 缩放
-      // var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
-      var clientWidth = document.documentElement.clientWidth
-      if (!clientWidth) return
-      document.documentElement.style.fontSize = 100 * (clientWidth / 1080) + 'px'
       // swiper
       var menuButton = document.querySelector('.menu-button')
       window.swiper = new Swiper('.swiper-container-main', {

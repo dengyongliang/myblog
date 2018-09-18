@@ -77,7 +77,7 @@
     transition: height 0.5s;
     position: relative;
     z-index: 1;
-    background: #f28c8c;
+    background: #333;
     margin:0 0.1rem;
     border-radius: 10px;
     overflow: hidden;

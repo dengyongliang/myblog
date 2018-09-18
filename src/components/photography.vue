@@ -67,10 +67,14 @@ export default {
         var h = $this.attr("data-height")
         var h2 = $this.find(".wrap").height()
         var h3 = $('.swiper-slide-cont').height()
-        window.swiperCont.slideTo(('-'+h2), 100, false)
+        console.log($this.parent()[0].offsetTop)
+        var offsetTop = $this.parent()[0].offsetTop
+        console.log(Math.abs(window.swiperCont.translate))
+        if(Math.abs(window.swiperCont.translate) > offsetTop){
+          window.swiperCont.translate = "-"+(offsetTop-30)
+          window.swiperCont.update()
+        }
         $this.removeClass("open").css("height",h+"px")
-        //alert(h3-h2-237)
-        
       }else{
         $this.addClass("open")
         setTimeout(function(){

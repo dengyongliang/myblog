@@ -266,12 +266,11 @@ header a{
 }
 
 footer{
-	height: 30px;
-	line-height: 30px;
+	height: 40px;
+	line-height: 40px;
 	text-align: center;
 	font-size: 12px;
-	color: #58819c;
-	background: #eeeeee;
+	color: #999;
 }
 .btnTop{
 	height: 50px;
