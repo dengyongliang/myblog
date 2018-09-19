@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="info">
-          <h3>{{item.time}} <{{item.title}}></h3>
+          <h3>{{item.time}} [ {{item.title}} ]</h3>
           <p v-text="item.summary"></p>
         </div>
       

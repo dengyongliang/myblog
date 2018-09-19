@@ -6,6 +6,7 @@ import Case from '@/components/Case'
 import Ability from '@/components/Ability'
 import Career from '@/components/Career'
 import Photography from '@/components/Photography'
+import component404 from '@/components/component404'
 Router.prototype.goBack = function () {
 　　this.isBack = true
 　　window.history.go(-1)
@@ -14,6 +15,11 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path: '*',
+      name: '404',
+      component: component404
+    },
     {
       path: '/',
       name: '首页',

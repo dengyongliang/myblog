@@ -79,7 +79,6 @@
     z-index: 1;
     background: #333;
     margin:0 0.1rem;
-    border-radius: 10px;
     overflow: hidden;
 }
 .contPhotography .list .scroll.open{
@@ -105,11 +104,10 @@
 }
 .contPhotography .list img{
     position: static;
-    border-radius: 10px;
     vertical-align: top;
 }
 .contPhotography .list .info{
-    background: #a5c9cd;
+    background: #003366;
     position: relative;
     top:-15px;
     margin:0 0.1rem;
@@ -122,9 +120,10 @@
     font-size: 12px;
 }
 .contPhotography .list .info h3{
-    color: #fff;
+    color: #8cd0e5;
     font-size: 16px;
     margin-bottom: 10px;
+    font-weight: normal;
 }
 .contHome{
     height: 100vh;
@@ -173,4 +172,21 @@
     font-size: 0.8rem;
     color: #eaeaea;
     text-shadow: 2px 2px 2px #000;
+}
+
+.cont404{
+    height: 100vh;
+    background: #003366;
+    text-align: center;
+}
+.cont404 h3{
+    font-size: 3rem;
+    color: #fff;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+}
+.cont404 p{
+    font-size: 0.5rem;
+    color: #8cd0e5;
+    padding:0.1rem 0;
 }
