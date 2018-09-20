@@ -28,46 +28,142 @@
     ]
   },
   {
-    title: '白石山&狼牙山',
-    summary: '白石山雄居八百里太行山最北端，独一无二的大理岩峰林地貌;狼牙山因其奇峰林立，峥嵘险峻，状若狼牙而得名，因“狼牙山五壮士”的事迹而闻名',
-    time: '2018-05-(09,10)',
+    title: '意瑞法',
+    summary: '威尼斯水镇流连忘返，瑞士风景迷人，空气清新，值得一去的国家，法国==北京，商业化',
+    time: '2017-06-(18,28)',
     open: false,
     imgs: [
       {
-        src: '/static/img/photograph/bsslys/DSC_1128.JPG',
-        summary: '白石山5201314'
+        src: '/static/img/photograph/fayirui/DSC_0138.JPG',
+        summary: '意大利首都罗马一角'
       },
       {
-        src: '/static/img/photograph/bsslys/DSC_1170.JPG',
-        summary: '白石山偶遇大飞机'
+        src: '/static/img/photograph/fayirui/DSC_0165.JPG',
+        summary: '世界天主教的中心梵蒂冈圣彼得大教堂外走廊'
       },
       {
-        src: '/static/img/photograph/bsslys/DSC_0158.JPG',
-        summary: '白石山一角'
+        src: '/static/img/photograph/fayirui/DSC_0179.JPG',
+        summary: '梵蒂冈圣彼得大教堂外门卫'
       },
       {
-        src: '/static/img/photograph/bsslys/DSC_0392.JPG',
-        summary: '狼牙山玻璃站台'
+        src: '/static/img/photograph/fayirui/DSC_0212.JPG',
+        summary: '梵蒂冈圣彼得大教堂屋顶一角'
       },
       {
-        src: '/static/img/photograph/bsslys/DSC_0387.JPG',
-        summary: '狼牙山纪念碑'
-      }
-    ]
-  },
-{
-    title: '百花山',
-    summary: '百花山地带植被为暖温带落叶阔叶林，在天然植被的植物种类组成中，有热带亲缘植物（蕨类、猕猴桃等），也有寒带亲缘植物（核桃楸、毛榛、锦带花等）。',
-    time: '2017-07-23',
-    open: false,
-    imgs: [
-      {
-        src: '/static/img/photograph/bhs/IMG_2826.JPG',
-        summary: '途中偶遇大狗'
+        src: '/static/img/photograph/fayirui/DSC_0367.JPG',
+        summary: '意大利罗马斗兽场附近一棵树上的纹身'
       },
       {
-        src: '/static/img/photograph/bhs/IMG_2804.JPG',
-        summary: '百草甸一角'
+        src: '/static/img/photograph/fayirui/DSC_1078.JPG',
+        summary: '威尼斯水镇小船'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_1152.JPG',
+        summary: '威尼斯水镇贡多拉一角'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_1177.JPG',
+        summary: '威尼斯水镇附近小店'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_1180.JPG',
+        summary: '威尼斯水镇附近小店'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0441.JPG',
+        summary: '瑞士琉森市区街道'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0079.JPG',
+        summary: '瑞士琉森市区街道'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0183.JPG',
+        summary: '瑞士琉森市区街道'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0211.JPG',
+        summary: '瑞士琉森市区街道'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0264.JPG',
+        summary: '瑞士琉森市区街道'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0293.JPG',
+        summary: '瑞士琉森市区街道'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0295.JPG',
+        summary: '瑞士琉森市区街道'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0311.JPG',
+        summary: '瑞士琉森市区街道'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0344.JPG',
+        summary: '瑞士琉森市区街道'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0350.JPG',
+        summary: '瑞士琉森市区街道'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0389.JPG',
+        summary: '瑞士楚格小镇，非常富有，名车遍地，湖边一角风景'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0440.JPG',
+        summary: '瑞士阿尔卑斯山下小镇'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0456.JPG',
+        summary: '瑞士阿尔卑斯山金色山口小火车'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0486.JPG',
+        summary: '瑞士阿尔卑斯山少女峰顶'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0540.JPG',
+        summary: '瑞士因特拉肯市区风景'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0556.JPG',
+        summary: '瑞士因特拉肯市区风景'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_05688.JPG',
+        summary: '瑞士因特拉肯市区风景'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0562.JPG',
+        summary: '瑞士因特拉肯市区风景'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0573.JPG',
+        summary: '瑞士因特拉肯市区风景'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0708.JPG',
+        summary: '瑞士某某酒店附近一角'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0721.JPG',
+        summary: '法国巴黎卢浮宫'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_0740.JPG',
+        summary: '法国巴黎卢浮宫一角'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_1089.JPG',
+        summary: '法国老佛爷'
+      },
+      {
+        src: '/static/img/photograph/fayirui/DSC_1091.JPG',
+        summary: '法国老佛爷'
       }
     ]
   }
