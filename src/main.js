@@ -24,8 +24,7 @@ Vue.config.productionTip = false
 Vue.prototype.GLOBALS = GLOBAL
 
 /* eslint-disable no-new */
-window.vm = new Vue({
-  el: '#app',
+let vm = new Vue({
   data: {
     path: ''
   },
@@ -33,12 +32,12 @@ window.vm = new Vue({
   components: { App },
   template: '<App/>',
   mounted () {
-    var vue_this = this
+    let vue_this = this
     this.$nextTick(function () {
       // 去除遮罩
       // 等待首页背景图创建完毕
       // 背景图1-5张随机
-      var image = new Image()
+      let image = new Image()
       image.src = this.GLOBALS.HOME_IMG_SRC
       image.onload = () => {
         vue_this.GLOBALS.setBgImgAndDelCover()
@@ -48,7 +47,7 @@ window.vm = new Vue({
         $('.swiper-slide-main.content').addClass("swiper-no-swiping")
       }
       // swiper
-      var menuButton = document.querySelector('.menu-button')
+      let menuButton = document.querySelector('.menu-button')
       window.swiper = new Swiper('.swiper-container-main', {
         slidesPerView: 'auto',
         initialSlide: 1,
@@ -57,7 +56,7 @@ window.vm = new Vue({
         swipeHandler: '.swipe-handler',
         on: {
           init: function () {
-            var slider = this
+            let slider = this
             menuButton.addEventListener('click', function () {
               if ($(menuButton).hasClass('open')) {
                 // swiper 滚动条 重置
@@ -71,7 +70,7 @@ window.vm = new Vue({
             }, true)
           },
           resize: function () {
-            var clientWidth = $(document).width()
+            let clientWidth = $(document).width()
             if (!clientWidth) return
             document.documentElement.style.fontSize = 100 * (clientWidth / 1080) + 'px'
             // swiper.resize.resizeHandler();
@@ -83,6 +82,7 @@ window.vm = new Vue({
         direction: 'vertical',
         slidesPerView: 'auto',
         freeMode: true,
+        scrollbarHide:true,
         scrollbar: {
           el: '.swiper-scrollbar'
         },
@@ -92,7 +92,7 @@ window.vm = new Vue({
           },
           transitionEnd: function (swiper) {
             // 处理摄影列表图片延迟加载，滚动条重置
-            if( window.vm.$route.fullPath.indexOf("photography")!=-1 ){
+            if( vue_this.$route.fullPath.indexOf("photography")!=-1 ){
               $(".scroll").each(function(){
                 if($(this).hasClass("open")){
                   let h = $(this).find(".wrap").height()
@@ -114,8 +114,8 @@ window.vm = new Vue({
       })
       // 模拟hover事件
       $(document).on('touchstart', '.action:not(.disable)', function (e) {
-        var $this = $(this)
-        var flag = true
+        let $this = $(this)
+        let flag = true
         // 遍历子类
         $this.find('*').each(function () {
           // 查看有没有子类触发过active动作
@@ -142,4 +142,8 @@ window.vm = new Vue({
       immediate: true
     }
   }
+})
+router.onReady(() => {
+  // 开始挂载到dom上
+  vm.$mount('#app')
 })

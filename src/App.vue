@@ -9,22 +9,22 @@
           <ul>
             <li class="action">
               <router-link to="/cate/case">
-                案例
+                <i class="iconfont icon-iconmingxinganli"></i>案例
               </router-link>
             </li>
             <li class="action">
               <router-link to="/cate/ability">
-                技能
+                <i class="iconfont icon-caozuogongneng"></i>技能
               </router-link>
             </li>
               <li class="action">
               <router-link to="/cate/career">
-                生涯
+                <i class="iconfont icon-mubiao"></i>生涯
               </router-link>
             </li>
             <li class="action">
               <router-link to="/cate/photography">
-                摄影
+                <i class="iconfont icon-xiangji"></i>摄影
               </router-link>
             </li>
           </ul>

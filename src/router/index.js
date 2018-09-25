@@ -7,23 +7,31 @@ import Ability from '@/components/Ability'
 import Career from '@/components/Career'
 import Photography from '@/components/Photography'
 import component404 from '@/components/component404'
+// 自定义方法及变量
+import GLOBAL from '../global/global'
 Router.prototype.goBack = function () {
-　　this.isBack = true
-　　window.history.go(-1)
+  this.isBack = true
+  window.history.go(-1)
 }
 Vue.use(Router)
 
-export default new Router({
+const RouterMain = new Router({
   routes: [
     {
       path: '*',
       name: '404',
-      component: component404
+      component: component404,
+      meta: {
+        title: '404_'+GLOBAL.TITLE
+      }
     },
     {
       path: '/',
       name: '首页',
-      component: Home
+      component: Home,
+      meta: {
+        title: GLOBAL.TITLE
+      }
     },
     {
       path: '/cate',
@@ -32,29 +40,49 @@ export default new Router({
         {
           path: '',
           name: '案例',
-          component: Case
+          component: Case,
+          meta: {
+            title: '案例_'+GLOBAL.TITLE
+          }
         },
         {
           path: 'case',
           name: '案例',
-          component: Case
+          component: Case,
+          meta: {
+            title: '案例_'+GLOBAL.TITLE
+          }
         },
         {
           path: 'ability',
           name: '技能',
-          component: Ability
+          component: Ability,
+          meta: {
+            title: '技能_'+GLOBAL.TITLE
+          }
         },
         {
           path: 'career',
           name: '生涯',
-          component: Career
+          component: Career,
+          meta: {
+            title: '生涯_'+GLOBAL.TITLE
+          }
         },
         {
           path: 'photography',
           name: '摄影',
-          component: Photography
+          component: Photography,
+          meta: {
+            title: '摄影_'+GLOBAL.TITLE
+          }
         }
       ]
     }
   ]
 })
+RouterMain.beforeEach((to,from,next) => {
+  window.document.title=to.meta.title
+  next()
+})
+export default RouterMain
