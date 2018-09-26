@@ -69,8 +69,9 @@ body {
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 0.24rem;
 	color: #000;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
+	max-width: 800px;
 }
 
 /* 清除浮动 */
@@ -185,10 +186,10 @@ body {
 }
 .swiper-slide-main.menu .logo{
 	text-align: center;
-	padding:0.66rem 0 0.79rem 0;
+	padding:30px 0;
 }
 .swiper-slide-main.menu .logo img{
-	height: 2rem;
+	height: 70px;
 }
 .swiper-slide-main.menu ul{
 	margin:0 10px;
@@ -196,8 +197,8 @@ body {
 	border-bottom: 1px solid #fff;
 }
 .swiper-slide-main.menu li{
-	height: 1.16rem;
-	font-size: 0.36rem;
+	height: 40px;
+	font-size: 18px;
 	border-bottom: 1px solid #cacaca;
 	border-top: 1px solid #fff;
     display: -webkit-flex;
@@ -212,12 +213,14 @@ body {
 	width: 100%;
 	font-size: 16px;
 	text-align: center;
+	vertical-align: top;
 }
 .swiper-slide-main.menu .iconfont{
 	display: inline-block;
 	margin-right: 10px;
 	font-size: 19px;
-	vertical-align: middle;
+	vertical-align: top;
+	line-height: 22px;
 }
 .swiper-slide-main.menu .icon img{
 	max-width: 100%;
@@ -262,7 +265,7 @@ header{
 }
 header a{
     color: #fff;
-    font-size: 0.5rem;
+    font-size: 18px;
 }
 
 footer{
