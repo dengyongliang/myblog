@@ -90,25 +90,18 @@ let vm = new Vue({
         on: {
           init: function () {
           },
-          transitionEnd: function (swiper) {
-            // 处理摄影列表图片延迟加载，滚动条重置
-            if( vue_this.$route.fullPath.indexOf("photography")!=-1 ){
-              $(".scroll").each(function(){
-                if($(this).hasClass("open")){
-                  let h = $(this).find(".wrap").height()
-                  $(this).css("height",h+'px');
-                }else{
-                  let h = $(this).find("img").eq(0).height()
-                  $(this).attr("data-height",h).css("height",h+'px');
-                }
-              })
-              window.swiperCont.resize.resizeHandler()
-            }
-            if (Math.abs(window.swiperCont.getTranslate()) > $(document).height()) {
-              $('.btnTop').show()
-            } else {
-              $('.btnTop').hide()
-            }
+          touchStart: function(swiper){
+            console.log(swiper)
+            scrollEvents(vue_this, window.swiperCont)
+          },
+          touchMove: function(swiper){
+            scrollEvents(vue_this, window.swiperCont)
+          },
+          touchEnd: function(swiper){
+            scrollEvents(vue_this, window.swiperCont)
+          },
+          scroll: function(swiper){
+            scrollEvents(vue_this, window.swiperCont)
           }
         }
       })
@@ -147,3 +140,28 @@ router.onReady(() => {
   // 开始挂载到dom上
   vm.$mount('#app')
 })
+// 页面滚动所需处理内容
+function scrollEvents(vue_this,swiper_cont){
+  if( vue_this.$route.fullPath.indexOf("case")!=-1 || vue_this.$route.fullPath.indexOf("ability")!=-1 || vue_this.$route.fullPath.indexOf("career")!=-1 || vue_this.$route.fullPath.indexOf("photography")!=-1 ){
+    // 对摄影栏目高度进行实时计算
+    if( vue_this.$route.fullPath.indexOf("photography")!=-1 ){
+      $(".scroll").each(function(){
+        if($(this).hasClass("open")){
+          let h = $(this).find(".wrap").height()
+          $(this).css("height",h+'px');
+        }else{
+          let h = $(this).find("img").eq(0).height()
+          $(this).attr("data-height",h).css("height",h+'px');
+        }
+      })
+    }
+    // 实时更新滚动条
+    swiper_cont.resize.resizeHandler()
+  }
+  // 实时更新返回顶部按钮的现实/隐藏
+  if (Math.abs(swiper_cont.getTranslate()) > $(document).height()) {
+    $('.btnTop').show()
+  } else {
+    $('.btnTop').hide()
+  }
+}
