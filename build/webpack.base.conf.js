@@ -74,7 +74,13 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
-      }
+      },
+      // {
+      //   loader: 'image-webpack-loader',// 压缩图片
+      //   options: {
+      //     bypassOnDebug: true,
+      //   }
+      // }
     ]
   },
   node: {
