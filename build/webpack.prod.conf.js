@@ -122,12 +122,15 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
     // Make sure that the plugin is after any plugins that add images
-    new ImageminPlugin({
-      disable: process.env.NODE_ENV !== 'production', 
-      pngquant: {
-        quality: '70-80'
-      }
-    })
+    // new ImageminPlugin({
+    //   disable: process.env.NODE_ENV !== 'production', 
+    //   // pngquant: {
+    //   //   quality: '70-80'
+    //   // }
+    //   optipng: {
+    //     optimizationLevel: 8
+    //   }
+    // })
   ]
 })
 

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import NProgress from 'nprogress'
 import Home from '@/components/Home'
 import Main from '@/components/Main'
 import Case from '@/components/Case'
@@ -82,7 +83,11 @@ const RouterMain = new Router({
   ]
 })
 RouterMain.beforeEach((to,from,next) => {
+  NProgress.start();
   window.document.title=to.meta.title
   next()
 })
+RouterMain.afterEach(transition => {
+  NProgress.done();
+});
 export default RouterMain

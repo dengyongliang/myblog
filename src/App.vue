@@ -73,3 +73,10 @@ export default {
   }
 }
 </script>
+
+<style>
+@import 'nprogress/nprogress.css';
+#nprogress .bar{
+  background: #f00 !important;
+}
+</style>
