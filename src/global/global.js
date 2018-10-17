@@ -11,7 +11,7 @@ var setBgImgAndDelCover = () => {
   setTimeout(function () {
     $('#load').addClass('fadeOutDown')
     window.swiperCont.resize.resizeHandler()
-  }, 3000)
+  }, 1000)
 }
 export default
 {

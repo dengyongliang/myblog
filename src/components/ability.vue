@@ -1,6 +1,48 @@
 <template>
   <div class="contAbility">
     <div id="myChart" :style="{width: '100%', height: '100%'}"></div>
+    <table>
+      <tr>
+        <td class="col1">
+          5:
+        </td>
+        <td>
+          深入了解相关知识，未实际应用
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          6:
+        </td>
+        <td>
+          深入了解相关知识，对api进行一些实践
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          7:
+        </td>
+        <td>
+          有小型项目实践经验
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          8 - 9:
+        </td>
+        <td>
+          有大型项目实践经验，相关知识有深刻的理解
+        </td>
+      </tr>
+      <tr>
+        <td class="col1">
+          10:
+        </td>
+        <td>
+          实践案例多，经验丰富
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -26,7 +68,7 @@ export default {
           // window.datass = res.bodyText
           this.ability = eval('(' + res.bodyText + ')')
           // 设置屏幕可用区域高度
-          $('#myChart').height($(window).height() - $('header').height() - $('footer').height() - 40)
+          $('#myChart').height(this.ability[0].yAxis.length * 40)
           this.drawLine(this.ability[0])
         }, function (res) {
           return {}
@@ -127,5 +169,16 @@ export default {
 <style scoped>
 .contAbility{
   padding: 20px 10px;
+}
+.contAbility table{
+  margin:20px;
+  font-size:12px;
+}
+.contAbility table td{
+  padding:5px 10px;
+}
+.contAbility table td.col1{
+  width:70px;
+  text-align:right;
 }
 </style>

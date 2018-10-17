@@ -9,22 +9,22 @@
           <ul>
             <li class="action">
               <router-link to="/cate/case">
-                <i class="iconfont icon-iconmingxinganli"></i>案例
+                案例
               </router-link>
             </li>
             <li class="action">
               <router-link to="/cate/ability">
-                <i class="iconfont icon-caozuogongneng"></i>技能
+                技能
               </router-link>
             </li>
               <li class="action">
               <router-link to="/cate/career">
-                <i class="iconfont icon-mubiao"></i>生涯
+                生涯
               </router-link>
             </li>
             <li class="action">
               <router-link to="/cate/photography">
-                <i class="iconfont icon-xiangji"></i>摄影
+                摄影
               </router-link>
             </li>
           </ul>
@@ -41,7 +41,9 @@
             <div class="swiper-wrapper swiper-wrapper-cont">
               <div class="swiper-slide swiper-slide-cont ">
                 <transition name="fold" mode="out-in">
-                  <router-view></router-view>
+                  <keep-alive>
+                    <router-view></router-view>
+                  </keep-alive>
                 </transition>
               </div>
             </div>

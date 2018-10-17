@@ -3,7 +3,9 @@
     <Header></Header>
     <div class="contMain">
       <transition :name="transitionName">
-        <router-view class="routerView2"></router-view>
+        <keep-alive>
+          <router-view class="routerView2"></router-view>
+        </keep-alive>
       </transition>
     </div>
     <Footer></Footer>
