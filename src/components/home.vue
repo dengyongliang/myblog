@@ -20,14 +20,10 @@ export default {
   },
   mounted: function () {
     this.GLOBALS.setBgImgAndDelCover()
-    try {
-      window.swiperCont.slideTo(0, 300, false)
-      $(".btnTop").hide()
-      $('.swiper-slide-main.content').addClass("swiper-no-swiping")
-    }
-    catch(err) {
-      console.log(err)
-    }
+    this.GLOBALS.scrollTopEv()
+  },
+  activated: function(){
+    this.GLOBALS.scrollTopEv()
   }
 }
 </script>

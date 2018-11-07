@@ -136,6 +136,9 @@ let vm = new Vue({
     }
   }
 })
+// beforeEach etc 相关的事件只有在router创建完
+// 才能在vue挂载完成后执行相关事件
+// 否则默认不执行
 router.onReady(() => {
   // 开始挂载到dom上
   vm.$mount('#app')

@@ -18,10 +18,11 @@ export default {
     return {
     }
   },
+  activated: function(){
+    this.GLOBALS.scrollTopEv()
+  },
   mounted: function () {
     try {
-      window.swiperCont.slideTo(0, 300, false)
-      $(".btnTop").hide()
       $('.swiper-slide-main.content').addClass("swiper-no-swiping")
     }
     catch(err) {

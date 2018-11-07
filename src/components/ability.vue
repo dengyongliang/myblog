@@ -146,14 +146,10 @@ export default {
       console.log('监听到了ability更新完成')
       window.swiperCont.resize.resizeHandler()
       window.swiperCont.resize.resizeHandler()
-      try {
-        window.swiperCont.slideTo(0, 300, false)
-        $(".btnTop").hide()
-      }
-      catch(err) {
-        console.log(err)
-      }
     }
+  },
+  activated: function(){
+    this.GLOBALS.scrollTopEv()
   },
   watch: {
     'ability': {

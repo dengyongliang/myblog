@@ -89,15 +89,11 @@ export default {
     }
   },
   mounted: function () {
-    try {
-      window.swiperCont.slideTo(0, 300, false)
-      $(".btnTop").hide()
-    }
-    catch(err) {
-      console.log(err)
-    }
     // 通过getData获取数据
     this.getData()
+  },
+  activated: function(){
+    this.GLOBALS.scrollTopEv()
   },
   watch: {
     'caseArray': {

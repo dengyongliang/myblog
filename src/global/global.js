@@ -13,9 +13,19 @@ var setBgImgAndDelCover = () => {
     window.swiperCont.resize.resizeHandler()
   }, 1000)
 }
+var scrollTopEv = () => {
+  try {
+    window.swiperCont.slideTo(0, 100, false)
+    $(".btnTop").hide()
+  }
+  catch(err) {
+    console.log(err)
+  }
+}
 export default
 {
   TITLE,
   HOME_IMG_SRC,
-  setBgImgAndDelCover
+  setBgImgAndDelCover,
+  scrollTopEv
 }

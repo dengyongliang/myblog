@@ -16,13 +16,7 @@ export default {
   name: 'Case',
   updated: function () {
     console.log('监听到了case更新完成')
-    try {
-      window.swiperCont.slideTo(0, 300, false)
-      $(".btnTop").hide()
-    }
-    catch(err) {
-      console.log(err)
-    }
+    this.GLOBALS.scrollTopEv()
     setTimeout(function () {
       window.swiperCont.resize.resizeHandler()
       window.swiperCont.resize.resizeHandler()
@@ -48,6 +42,9 @@ export default {
   mounted: function () {
     // 通过getData获取数据
     this.getData()
+  },
+  activated: function(){
+    this.GLOBALS.scrollTopEv()
   },
   watch: {
     'caseArray': {
